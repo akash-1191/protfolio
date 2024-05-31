@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="demo.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                         <a href="#" class="block py-2 px-3 md:p-0 text-white text-xl">Contact</a>
                     </li>
                     <div class="text-xl  text-white">
-                        <button class=" py-2 px-3 md:p-0 md:ml-32 ml-0 mr-0">Git link</button>
+                        <button class=" rounded-md py-2 px-3 md:p-0 md:ml-32 ml-0 mr-0">Git link</button>
                     </div>
                 </ul>
             </div>

@@ -7,14 +7,15 @@
   <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
   <meta name="author" content="Vincent Garreau" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="demo.css">
+  <link rel="stylesheet" media="screen" href="./css/demo.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body >
+<body>
   <?php include_once "navbar.php"; ?>
-  
+
   <!-- particles.js container -->
   <section id="particles-js" class="relative flex justify-center items-center min-h-screen">
     <div class="absolute flex flex-col md:flex-row justify-center items-center w-full p-4 space-y-10 md:space-y-0 md:space-x-10">
@@ -30,10 +31,18 @@
         </div>
       </div>
       <div class="w-full md:w-1/4 flex justify-center md:justify-start">
-        <img src="./image/akashpro.jpeg" alt="Image not supported" class="rounded-3xl rotate-6 transition-transform hover:rotate-0 w-48 md:w-auto">
+        <img src="./image/akashpro.jpeg" alt="Image not supported" class="rounded-3xl rotate-6 transition-transform hover:rotate-0 w-72">
       </div>
     </div>
   </section>
+
+  <?php
+  include_once "About.php";
+
+  include_once "Skills.php";
+  include_once "project.php";
+
+  ?>
 
   <!-- scripts -->
   <script src="particles.js"></script>
