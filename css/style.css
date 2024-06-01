@@ -20,7 +20,65 @@ ul li .block{
     width: 100%;
   }
   
-  
+  /* about page css */
+
+  .tool, .tool1, .tool2 {
+      width: 250px;
+      height: 250px;
+      box-shadow: 16px 14px 20px #0000008c;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #101010;
+      margin: 10px; /* Added for spacing between divs */
+  }
+  .tool::before, .tool1::before, .tool2::before {
+      content: "";
+      width: 150%;
+      height: 150%;
+      position: absolute;
+      animation: rotate 2s linear infinite;
+  }
+  .tool::before {
+      background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+  }
+  .tool1::before {
+      background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
+  }
+  .tool2::before {
+      background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+  }
+  .tool::after, .tool1::after, .tool2::after {
+      content: "";
+      width: 240px;
+      height: 240px;
+      background: #101010 no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      border-radius: 10px;
+      box-shadow: inset 20px 20px 20px #0000008c;
+  }
+  .tool::after {
+      background-image: url('../image/vscode.png'); /* Replace with your image */
+  }
+  .tool1::after {
+      background-image: url('../image/macos.png'); /* Replace with your image */
+  }
+  .tool2::after {
+      background-image: url('../image/postman.png'); /* Replace with your image */
+  }
+  @keyframes rotate {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+  }
+
 
   
   

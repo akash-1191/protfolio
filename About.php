@@ -1,3 +1,4 @@
+
 <section class="mt-20 py-10 ">
     <div>
         <p class=" text-4xl flex justify-center items-center text-center text-red-500 pb-24   font-bold">About Me!</p>
@@ -21,13 +22,10 @@
         <p class="text-4xl capitalize font-bold text-white flex justify-center items-center ">Tools <span class="px-2 text-3xl font-bold text-red-500 flex justify-center items-center ">I Use</span> </p>
     </div>
     <div class="text-white flex flex-wrap px-5 justify-center items-center gap-20 pt-20 pb-10">
-        <div style="border: 1px solid green;   box-shadow: 0 0 5px green,  0 0 5px green,  0 0 5px green; " class="p-8 text-2xl rounded-md w-36 flex justify-center font-bold uppercase items-center hover:scale-105 transition-all border-2 border-green-500 shadow-md">Vscode</div>
-        <div style="border: 1px solid green;   box-shadow: 0 0 5px green,  0 0 5px green,  0 0 5px green; " class="p-8 text-2xl rounded-md w-36 flex justify-center font-bold uppercase items-center hover:scale-105 transition-all border-2 border-green-500 shadow-md">macos</div>
-        <div style="border: 1px solid green;   box-shadow: 0 0 5px green,  0 0 5px green,  0 0 5px green; " class="p-2 text-2xl rounded-md w-36 flex justify-center font-bold uppercase items-center hover:scale-105 transition-all border-2 border-green-500 shadow-md">
-            <img src="./image/postman.png" class="h-20" alt="Postman">
-        </div>
-        <div style="border: 1px solid green;   box-shadow: 0 0 5px green,  0 0 5px green,  0 0 5px green; " class="p-8 text-2xl rounded-md w-40 flex justify-center font-bold uppercase items-center hover:scale-105 transition-all border-2 border-green-500 shadow-md">subline</div>
-    </div>
+        <div class="tool"></div>
+        <div class="tool1"></div>
+        <div class="tool2"></div>
+     
 
 
 
