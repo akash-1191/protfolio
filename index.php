@@ -15,9 +15,9 @@
 </head>
 
 <body>
-  
+
   <?php include_once "navbar.php"; ?>
-  
+
   <!-- particles.js container -->
   <section id="particles-js" class=" min-h-screen">
     <div class="absolute flex flex-wrap justify-center items-center w-full p-4 space-y-10 md:space-y-0 md:space-x-10">
@@ -30,7 +30,10 @@
           <i class="fa-brands fa-linkedin p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i>
           <i class="fa-brands fa-twitter p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i>
           <i class="fa-brands fa-instagram p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i>
-          <button class="text-2xl ml-4 md:ml-8 text-white px-6 md:px-10 py-2 border border-red-500 rounded-2xl bg-red-600 hover:bg-red-800 transition-all">Contact</button>
+          <a href="./image/BDCS.png" Download target="_blank">  
+          <button class="text-2xl ml-4 md:ml-8 text-white px-6 md:px-5 py-2 border border-red-500 rounded-2xl bg-red-600 hover:bg-red-800 transition-all">
+            Download CVV</button></a>
+          
         </div>
       </div>
       <div class="md:w-1/5 w-52 ">
@@ -38,6 +41,7 @@
       </div>
     </div>
   </section>
+  
 
   <?php
   include_once "About.php";
