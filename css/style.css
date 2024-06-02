@@ -21,10 +21,9 @@ ul li .block{
   }
   
   /* about page css */
-
   .tool, .tool1, .tool2 {
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
       box-shadow: 16px 14px 20px #0000008c;
       border-radius: 10px;
       position: relative;
@@ -53,8 +52,8 @@ ul li .block{
   }
   .tool::after, .tool1::after, .tool2::after {
       content: "";
-      width: 240px;
-      height: 240px;
+      width: 210px;
+      height: 210px;
       background: #101010 no-repeat center center;
       background-size: contain;
       position: absolute;
@@ -70,6 +69,8 @@ ul li .block{
   .tool2::after {
       background-image: url('../image/postman.png'); /* Replace with your image */
   }
+
+
   @keyframes rotate {
       from {
           transform: rotate(0deg);
@@ -79,6 +80,103 @@ ul li .block{
       }
   }
 
+  /* skills page animation  */
+
+     /* about page css */
+     .tool3, .tool4, .tool5, .tool6,.tool7, .tool8, .tool9, .tool10,.tool11, .tool12{
+        width: 210px;
+        height: 210px;
+        box-shadow: 16px 14px 20px #0000008c;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #101010;
+        margin: 10px; 
+    }
+    .tool3::before, .tool4::before, .tool5::before, .tool6::before,
+    .tool7::before, .tool7::before, .tool8::before, .tool9::before,
+    .tool10::before, .tool11::before, .tool12::before{
+        content: "";
+        width: 160%;
+        height: 160%;
+        position: absolute;
+        animation: rotate 2s linear infinite;
+    }
+    .tool3::before {
+        background-image: conic-gradient(#ff0052 20deg, transparent 120deg );
+    }
+    .tool5::before {
+        background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
+    }
+    .tool4::before {
+        background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+    }
+    .tool6::before {
+        background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    }
+    .tool7::before {
+        background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
+    }
+    .tool8::before {
+        background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+    }
+    .tool9::before {
+        background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    }
+    .tool10::before {
+        background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
+    }
+    .tool11::before {
+        background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+    }
+    .tool12::before {
+        background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    }
+    .tool3::after, .tool4::after, .tool5::after, .tool6::after,
+    .tool7::after, .tool7::after, .tool8::after, .tool9::after,
+    .tool10::after, .tool11::after, .tool12::after {
+        content: "";
+        width: 200px;
+        height: 200px;
+        background: #101010 no-repeat center center;
+        background-size: contain;
+        position: absolute;
+        border-radius: 10px;
+        
+        box-shadow: inset 20px 20px 20px #0000008c;
+    }
+      /* skills page animations */
+.tool3::after {
+    background-image: url('../image/htmlnew.png'); /* Replace with your image */
+}
+.tool4::after {
+    background-image: url('../image/css-removebg-preview.png'); /* Replace with your image */
+}
+.tool5::after {
+    background-image: url('../image/js1.png'); /* Replace with your image */
+}.tool6::after {
+    background-image: url('../image/tailwind.png'); /* Replace with your image */
+}
+.tool7::after {
+    background-image: url('../image/jquery.png'); /* Replace with your image */
+}
+.tool8::after {
+    background-image: url('../image/python-removebg-preview.png'); /* Replace with your image */
+}.tool9::after {
+    background-image: url('../image/php-Photoroom.png'); /* Replace with your image */
+}
+.tool10::after {
+    background-image: url('../image/mysql-removebg-preview.png'); /* Replace with your image */
+}
+.tool11::after {
+    background-image: url('../image/github1.png'); /* Replace with your image */
+}
+.tool12::after {
+    background-image: url('../image/office.png'); /* Replace with your image */
+}
 
   
   
