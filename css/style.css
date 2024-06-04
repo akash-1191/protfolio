@@ -7,7 +7,7 @@ ul li .block{
   ul li .block::after{
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 5;
     top: 28px;
     left: 0px;
     width: 0;
@@ -32,7 +32,7 @@ ul li .block{
       justify-content: center;
       align-items: center;
       background: #101010;
-      margin: 10px; /* Added for spacing between divs */
+      margin: 10px;
   }
   .tool::before, .tool1::before, .tool2::before {
       content: "";
@@ -61,13 +61,13 @@ ul li .block{
       box-shadow: inset 20px 20px 20px #0000008c;
   }
   .tool::after {
-      background-image: url('../image/vscode.png'); /* Replace with your image */
+      background-image: url('../image/vscode.png'); 
   }
   .tool1::after {
-      background-image: url('../image/macos.png'); /* Replace with your image */
+      background-image: url('../image/macos.png'); 
   }
   .tool2::after {
-      background-image: url('../image/postman.png'); /* Replace with your image */
+      background-image: url('../image/postman.png'); 
   }
 
 
@@ -150,36 +150,54 @@ ul li .block{
     }
       /* skills page animations */
 .tool3::after {
-    background-image: url('../image/htmlnew.png'); /* Replace with your image */
+    background-image: url('../image/htmlnew.png'); 
 }
 .tool4::after {
-    background-image: url('../image/css-removebg-preview.png'); /* Replace with your image */
+    background-image: url('../image/css-removebg-preview.png'); 
 }
 .tool5::after {
-    background-image: url('../image/js1.png'); /* Replace with your image */
+    background-image: url('../image/js1.png'); 
 }.tool6::after {
-    background-image: url('../image/tailwind.png'); /* Replace with your image */
+    background-image: url('../image/tailwind.png'); 
 }
 .tool7::after {
-    background-image: url('../image/jquery.png'); /* Replace with your image */
+    background-image: url('../image/jquery.png'); 
 }
 .tool8::after {
-    background-image: url('../image/python-removebg-preview.png'); /* Replace with your image */
+    background-image: url('../image/python-removebg-preview.png'); 
 }.tool9::after {
-    background-image: url('../image/php-Photoroom.png'); /* Replace with your image */
+    background-image: url('../image/php-Photoroom.png'); 
 }
 .tool10::after {
-    background-image: url('../image/mysql-removebg-preview.png'); /* Replace with your image */
+    background-image: url('../image/mysql-removebg-preview.png'); 
 }
 .tool11::after {
-    background-image: url('../image/github1.png'); /* Replace with your image */
+    background-image: url('../image/github1.png'); 
 }
 .tool12::after {
-    background-image: url('../image/office.png'); /* Replace with your image */
+    background-image: url('../image/uiux.png'); 
+}
+/* certificate.php css */
+
+.cer {
+    transition: all 1.5s ease 0s !important;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 9px; 
 }
 
-  
-  
-  
-  
-  
+.cer:hover {
+    box-shadow: 0 1px 5px 5px blue, 0 1px 5px 5px blue;
+    transform: scale(1.05);
+    
+}
+  /* project.php css style */
+.card {
+    transition: all .8s ease 0s !important;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    box-shadow: 0 1px 5px 3px rgba(250, 50, 50, 0.7), 0 1px 5px 3px rgba(50, 150, 250, 0.7);
+    transform: scale(1.05);
+   
+}
