@@ -1,5 +1,5 @@
 
-<section class="py-10">
+<section class="py-10 px-10">
     <div class="text-white text-2xl">
         <p class="text-4xl flex justify-center items-center text-center text-red-500 pb-24 font-bold capitalize">Skills-oriented approach</p>
     </div>
@@ -50,3 +50,11 @@
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+

@@ -186,7 +186,7 @@ ul li .block{
 }
 
 .cer:hover {
-    box-shadow: 0 1px 5px 5px blue, 0 1px 5px 5px blue;
+    box-shadow: 0 1px 5px 5px #9666f8, 0 1px 5px 5px #9666f8;
     transform: scale(1.05);
     
 }

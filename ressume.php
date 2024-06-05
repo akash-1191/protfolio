@@ -16,10 +16,10 @@
   }
 </script>
 
-<section class="text-white flex justify-center items-center  py-10 pt-20">
+<section class="text-white flex  py-10 pt-20">
   <div class="flex flex-col  justify-center items-center  w-full px-4">
     <div class=" w-full max-w-3xl">
-      <div class=" flex  gap-4 sm:gap-10">
+      <div class=" flex justify-center items-center  gap-4 sm:gap-10">
         <button class="text-xl sm:text-2xl w-[50vw] text-white px-4 sm:px-6 py-2 border border-red-500 rounded-lg bg-red-600 hover:bg-red-800 transition-all" onclick="showDocument()">
           Show CVV
         </button>

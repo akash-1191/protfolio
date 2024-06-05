@@ -25,6 +25,7 @@
 
   include_once "ressume.php";
   include_once "certificate.php";
+  include_once "contat.php";
   include_once "footer.php";
   ?>
   <!-- scripts -->
