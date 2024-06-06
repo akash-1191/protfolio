@@ -3,7 +3,6 @@
         <p class="text-4xl capitalize font-bold text-white flex justify-center items-center ">Professional <span class="px-2 text-3xl font-bold text-red-500 flex justify-center items-center ">Skills</span> </p>
     </div>
     <div class=" flex flex-wrap gap-5 justify-center items-center pt-20 ">
-
         <div class="tool3"></div>
         <div class="tool4"></div>
         <div class="tool5"></div>

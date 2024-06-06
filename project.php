@@ -1,6 +1,6 @@
 
 <section>
-    <div class="pt-20">
+    <div class="">
         <p class="text-4xl  flex justify-center items-center text-center text-red-500  font-bold leading-relaxed"> Build Project</p>
     </div>
     <div class="flex flex-wrap gap-36 justify-center items-center py-16">
@@ -12,7 +12,7 @@
                 <h5 class="block mb-2 font-sans text-2xl antialiased font-bold leading-snug tracking-normal text-white uppercase text-center">
                     Reflector Photography
                 </h5>
-                <p class="block font-sans text-base antialiased  text-white leading-relaxed text-inherit">
+                <p class="block font-sans text-base antialiased  text-gray-400 leading-relaxed">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid provident voluptas, ipsum adipisci vero odio debitis quibusdam quisquam reprehenderit ad!
                 </p>
             </div>
@@ -30,7 +30,7 @@
                 <h5 class="block mb-2 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-white uppercase text-center">
                     BDCS (Blood Distribution And Collection System)
                 </h5>
-                <p class="block font-sans text-base antialiased text-white leading-relaxed text-inherit">
+                <p class="block font-sans text-base antialiased text-gray-400 leading-relaxed ">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid provident voluptas, ipsum adipisci vero odio debitis quibusdam quisquam reprehenderit ad!
                 </p>
             </div>

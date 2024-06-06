@@ -1,16 +1,16 @@
 <script>
-function showDocumentone(event) {
-  event.preventDefault();
-  window.open('./image/Akash5.pdf', '_blank');
-}
+  function showDocumentone(event) {
+    event.preventDefault();
+    window.open('./image/Akash5.pdf', '_blank');
+  }
 
-function hideDocument() {
-  var iframe = document.getElementById('pdfIframeone');
-  var returnButton = document.getElementById('returnButton');
-  iframe.classList.add('hidden');
-  returnButton.classList.add('hidden');
-  iframe.src = './image/Akash5.pdf';
-}
+  function hideDocument() {
+    var iframe = document.getElementById('pdfIframeone');
+    var returnButton = document.getElementById('returnButton');
+    iframe.classList.add('hidden');
+    returnButton.classList.add('hidden');
+    iframe.src = './image/Akash5.pdf';
+  }
 </script>
 
 <!-- particles.js container -->
@@ -21,10 +21,10 @@ function hideDocument() {
       <div class="text-white text-3xl md:text-5xl font-bold py-3">I'm <span class="text-red-500">Akash Maurya</span></div>
       <div class="text-white text-3xl md:text-5xl font-bold py-3 capitalize">I am a web developer</div>
       <div class="flex flex-wrap items-center mt-4 md:mt-10 text-white text-3xl">
-        <i class="fa-brands fa-github p-4 hover:text-rose-500 hover:scale-125  " style="transition: all 0.5s ease 0s;"></i>
-        <i class="fa-brands fa-linkedin p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i>
-        <i class="fa-brands fa-twitter p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i>
-        <i class="fa-brands fa-instagram p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i>
+        <a href="https://github.com/akash-1191" target="_blank"><i class="fa-brands fa-github p-4 hover:text-rose-500 hover:scale-125  " style="transition: all 0.5s ease 0s;"></i></a>
+        <a href="https://www.linkedin.com/in/akash-maurya-319632256/" target="_blank"><i class="fa-brands fa-linkedin p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i></a>
+        <a href="https://x.com/AkashMaury1191" target="_blank"><i class="fa-brands fa-twitter p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i></a>
+        <a href="https://www.instagram.com/maurya_akash_1191/?next=%2F" target="_blank"><i class="fa-brands fa-instagram p-4 hover:text-rose-500 hover:scale-125 " style="transition: all 0.5s ease 0s;"></i></a>
         <button class="text-2xl ml-4 md:ml-8 text-white px-6 md:px-5 py-2 border border-red-500 rounded-2xl bg-red-600 hover:bg-red-800 transition-all" onclick="showDocumentone(event)">
           Download CVV
         </button>
