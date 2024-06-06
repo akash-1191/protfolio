@@ -1,7 +1,7 @@
 
 <section>
     <div class="">
-        <p class="text-4xl  flex justify-center items-center text-center text-red-500  font-bold leading-relaxed"> Build Project</p>
+        <p class="text-4xl  flex justify-center items-center text-center text-transparent  bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500  font-bold leading-relaxed "> Build Project</p>
     </div>
     <div class="flex flex-wrap gap-36 justify-center items-center py-16">
         <div class=" card flex flex-wrap mt-6 text-gray-700 bg-black  rounded-xl w-96 hover:scale-105 shadow-lg transition-all">
@@ -17,7 +17,7 @@
                 </p>
             </div>
             <div class="flex justify-center items-center w-full py-9">
-                <button class="text-white border border-red-600 bg-red-500 hover:bg-red-700 p-2 rounded-md  text-lg">
+                <button class="btn-grad  text-white border border-red-600 bg-red-500 hover:bg-red-700 p-2 rounded-md  text-lg">
                     <span class="mr-2"><i class="fa-brands fa-github"></i></span> GitHub</button>
             </div>
         </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="flex justify-center items-center w-full py-5">
 
-                <button class="text-white border border-red-600 bg-red-500 hover:bg-red-700 p-2 rounded-md  text-lg">
+                <button class="btn-grad text-white border border-red-600 bg-red-500 hover:bg-red-700 p-2 rounded-md  text-lg">
                     <span class="mr-2"><i class="fa-brands fa-github"></i></span> GitHub</button>
             </div>
         </div>

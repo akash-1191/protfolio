@@ -1,113 +1,146 @@
-<?php
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $name = htmlspecialchars($_POST['name']);
-//     $email = htmlspecialchars($_POST['email']);
-//     $contactNumber = htmlspecialchars($_POST['contact_number']);
-//     $message = htmlspecialchars($_POST['message']);
-    
-//     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-//         echo "<script>alert('Invalid email address. Please provide a valid email.');</script>";
-//     } else {
-//         $to = "mauryaakash1191@gmail.com";
-//         $subject = "Contact Form Hire";
-        
-//         $email_message = "Name: " . $name . "\n";
-//         $email_message .= "Email: " . $email . "\n";
-//         $email_message .= "Contact Number: " . $contactNumber . "\n";
-//         $email_message .= "Message: \n" . $message;
-        
-//         $headers = "From: " . $email . "\r\n";
-//         $headers .= "Reply-To: " . $email . "\r\n";
-//         $headers .= "X-Mailer: PHP/" . phpversion(); 
-        
-//         if (mail($to, $subject, $email_message, $headers)) {
-//             echo "<script>alert('Your message has been sent successfully!');</script>";
-//         } else {
-//             echo "<script>alert('Sorry, there was an error sending your message. Please try again later.');</script>";
-//         }
-//     }
-// }
+b<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get and sanitize input
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $contactNumber = htmlspecialchars($_POST['contact_number']);
+    $message = htmlspecialchars($_POST['message']);
+
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Invalid email address. Please provide a valid email.');</script>";
+        exit;
+    }
+
+    // Load Composer's autoloader
+    require './phpmailer/Exception.php';
+    require './phpmailer/PHPMailer.php';
+    require './phpmailer/SMTP.php';
+
+    // Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'webdevloper11919463@gmail.com';
+        $mail->Password   = 'mohk hecx xxfs nhms';  // Be careful with exposing credentials in code
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+
+        // Recipients
+        $mail->setFrom('webdevloper11919463@gmail.com', 'Contact Form');
+        $mail->addAddress('webdevloper11919463@gmail.com', 'Web Developer');  // Send to your own email
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = 'Protfolio Message To Hiring';
+        $mail->Body    = "
+            <table style='width: 100%; border: 1px solid #ddd; border-collapse: collapse;'>
+                <tr style='background-color: #f2f2f2;'>
+                    <th style='padding: 10px; border: 1px solid #ddd;'>Field</th>
+                    <th style='padding: 10px; border: 1px solid #ddd;'>Details</th>
+                </tr>
+                <tr>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>Sender Name</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>$name</td>
+                </tr>
+                <tr>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>Sender Email</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>$email</td>
+                </tr>
+                <tr>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>Contact Number</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>$contactNumber</td>
+                </tr>
+                <tr>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>Message</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>$message</td>
+                </tr>
+            </table>
+        ";
+
+        $mail->send();
+        echo "<script>alert('Message has been sent');</script>";
+    } catch (Exception $e) {
+        echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
+    }
+}
 ?>
 
-
-<section class="py-10 grid md:grid-cols-2 sm:grid-cols-1">
-    <div class="md:px-10 px-8">
-        <div class="bg-black rounded-lg w-full sm:max-w-[40vw] sm:h-auto p-10">
-            <div class="text-center capitalize leading-normal w-full ">
-                <h1 class="text-transparent bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500 text-6xl">Contact me</h1>
+<section class="py-10 sm:py-16 lg:py-20">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap-reverse justify-center items-center md:space-x-12 md:gap-52">
+            <div class="bg-gray-400 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 px-5 py-5">
+                <div class="rounded-lg w-full px-5 py-5">
+                    <div class="text-center capitalize leading-normal w-full">
+                        <h1 class="text-transparent bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500 md:text-5xl text-4xl">Contact me</h1>
+                    </div>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="pt-10 space-y-4">
+                            <div>
+                                <input type="text" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="name" id="name" placeholder="First Name">
+                            </div>
+                            <div>
+                                <input type="email" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="email" id="email" placeholder="Enter Email">
+                            </div>
+                            <div>
+                                <input type="text" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="contact_number" id="contact_number" placeholder="Contact Number">
+                            </div>
+                            <div>
+                                <textarea name="message" rows="5" class="bg-black px-4 py-2 text-white text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900 w-full" placeholder="Write Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <div class="flex justify-start text-white">
+                                <button type="submit" name="submit" class="bg-gradient-to-r from-blue-500 to-black hover:bg-gradient-to-l p-3 rounded-full text-xl w-full">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <div class="flex flex-wrap justify-center items-center gap-5 py-6 sm:py-10">
-                    <div class="">
-                        <input type="text" class="bg-black bg-transparent text-white md:w-60 w-full sm:w-80 h-14 px-2 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="name" id="name" placeholder="First Name">
-                    </div>
-                    <div class="">
-                        <input type="email" class="bg-black bg-transparent text-white md:w-60 w-full sm:w-80 h-14 px-2 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900 " name="email" id="email" placeholder="Enter Email">
-                    </div>
-                </div>
-                <div class="flex flex-wrap justify-center items-center gap-5 ">
-                    <div class="">
-                        <input type="text" class="bg-black bg-transparent text-white md:w-60 w-full sm:w-80 h-14 px-2 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900 " name="contact_number" id="contact_number" placeholder="Contact Number">
-                    </div>
-                    <div class="">
-                        <textarea name="message" rows="5" cols="33" class="bg-black px-2 py-2 text-white text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900 w-full sm:w-auto" placeholder="Write Message"></textarea>
-                    </div>
-                </div>
-                <div>
-                    <div class="">
-                        <div class="flex justify-center items-center text-white w-full py-2 px-2">
-                            <button type="submit" name="submit" class="bg-gradient-to-r from-blue-500 to-black hover:bg-gradient-to-l p-3 rounded-full text-xl">Send Message</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="px-5 w-full">
-        <div class="max-w-2xl w-full mx-auto">
-            <div class="flex flex-col space-y-5 py-32">
-                <div class="flex w-full py-5">
-                    <a href="tel:6355923492">
-                        <div class="relative flex justify-center items-center w-16 h-16 rounded-full text-white bg-gradient-to-br from-blue-500 to-gray-900 hover:bg-gradient-to-bl hover:scale-110 transition duration-500">
-                            <div class="text-2xl">
-                                <i class="fa-solid fa-phone-volume absolute top-5 left-5"></i>
-                            </div>
-                        </div>
-                    </a>
 
-                    <div class="ml-5 md:ml-10">
-                        <p class="text-lg text-white">Phone</p>
-                        <p class="text-xl text-white font-bold">6355923492</p>
-                    </div>
-
-                </div>
-                <div class="flex w-full py-5">
-                    <a href="mailto:mauryakash0198@gmail.com" target="_blank">
-                        <div class="relative flex justify-center items-center w-16 h-16 rounded-full text-white bg-gradient-to-br from-blue-500 to-gray-900 hover:bg-gradient-to-bl hover:scale-110 transition duration-500">
-                            <div class="text-2xl">
-                                <i class="fa-solid fa-envelope absolute top-5 left-5"></i>
+            <div class="w-full sm:w-3/4 md:w-1/2 lg:w-1/3">
+                <div class="max-w-2xl w-full mx-auto">
+                    <div class="flex flex-col space-y-5 py-10 md:py-16 lg:py-20">
+                        <div class="flex items-center w-full py-5">
+                            <a href="tel:6355923492" class="rounded-full w-18 h-16 bg-gradient-to-br from-blue-500 to-gray-900 hover:bg-gradient-to-bl hover:scale-110 transition duration-500 p-4">
+                                <i class="fa-solid fa-phone-volume text-white text-3xl"></i>
+                            </a>
+                            <div class="ml-5">
+                                <p class="text-lg text-white">Phone</p>
+                                <p class="text-xl text-white font-bold">6355923492</p>
                             </div>
                         </div>
-                    </a>
-                    <div class="ml-5 md:ml-10">
-                        <p class="text-lg text-white">Email</p>
-                        <p class="text-xl text-white font-bold">mauryaakash0198@gmail.com</p>
-                    </div>
-                </div>
-                <div class="flex w-full py-5">
-                    <a href="https://www.google.com/maps/place/Mahadev+Nagar+Pandesara/@21.1551426,72.8208662,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f8d7862b29f:0x121cff71a555d13f!8m2!3d21.1551376!4d72.8234411!16s%2Fg%2F11gxvspwfl?entry=ttu" target="_blank">
-                        <div class="relative flex justify-center items-center w-16 h-16 rounded-full text-white bg-gradient-to-br from-blue-500 to-gray-900 hover:bg-gradient-to-bl hover:scale-110 transition duration-500">
-                            <div class="text-2xl">
-                                <i class="fa-solid fa-location-dot absolute top-5 left-5"></i>
+                        <div class="flex items-center w-full py-5">
+                            <a href="mailto:mauryaakash0198@gmail.com" class="rounded-full w-18 h-16 bg-gradient-to-br from-blue-500 to-gray-900 hover:bg-gradient-to-bl hover:scale-110 transition duration-500 p-4">
+                                <i class="fa-solid fa-envelope text-white text-3xl"></i>
+                            </a>
+                            <div class="ml-5">
+                                <p class="text-lg text-white">Email</p>
+                                <p class="text-xl text-white font-bold">mauryaakash0198@gmail.com</p>
                             </div>
                         </div>
-                    </a>
-                    <div class="ml-5 md:ml-10">
-                        <p class="text-lg text-white">Location</p>
-                        <p class="text-xl text-white font-bold capitalize">pandesara surat 394221</p>
+                        <div class="flex items-center w-full py-5">
+                            <a href="https://www.google.com/maps/place/Mahadev+Nagar+Pandesara/@21.1551426,72.8208662,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f8d7862b29f:0x121cff71a555d13f!8m2!3d21.1551376!4d72.8234411!16s%2Fg%2F11gxvspwfl?entry=ttu" target="_blank" class="rounded-full w-18 h-16 bg-gradient-to-br from-blue-500 to-gray-900 hover:bg-gradient-to-bl hover:scale-110 transition duration-500 p-5">
+                                <i class="fa-solid fa-location-dot text-white text-3xl"></i>
+                            </a>
+                            <div class="ml-5">
+                                <p class="text-lg text-white">Location</p>
+                                <p class="text-xl text-white font-bold capitalize">Pandesara Surat, 394221</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+

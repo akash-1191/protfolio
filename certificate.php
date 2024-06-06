@@ -1,7 +1,7 @@
 
 <section class="py-10 px-10">
     <div class="text-white text-2xl">
-        <p class="text-4xl flex justify-center items-center text-center text-red-500 pb-24 font-bold capitalize">Skills-oriented approach</p>
+        <p class="text-4xl flex justify-center items-center text-center text-transparent  bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500 pb-24 font-bold capitalize">Skills-oriented approach</p>
     </div>
 <div>
     <div class=" grid md:grid-cols-4 sm:grid-cols-2 gap-10 px-20 ">
