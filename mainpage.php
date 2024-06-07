@@ -40,8 +40,8 @@
 </style>
 
 <!-- particles.js container -->
-<section id="particles-js" class="min-h-screen">
-    <div class="absolute flex flex-wrap justify-center items-center w-full p-4 space-y-10 md:space-y-0 md:space-x-10">
+<section id="particles-js" class="min-h-screen ">
+    <div class="absolute flex flex-wrap justify-center items-center w-full p-4 space-y-10 md:space-y-0 md:space-x-10 pt-20">
         <div class="w-full md:w-1/2 text-start">
             <div class="text-white text-3xl md:text-5xl font-bold py-3">Hi</div>
             <div class="text-white text-3xl md:text-5xl font-bold py-3">I'm <span class="text-transparent bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500">Akash Maurya</span></div>

@@ -1,4 +1,4 @@
-b<?php
+<?php
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <i class="fa-solid fa-phone-volume text-white text-3xl"></i>
                             </a>
                             <div class="ml-5">
-                                <p class="text-lg text-white">Phone</p>
+                                <p class="text-lg mr-20  text-white">Phone</p>
                                 <p class="text-xl text-white font-bold">6355923492</p>
                             </div>
                         </div>
@@ -123,8 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <i class="fa-solid fa-envelope text-white text-3xl"></i>
                             </a>
                             <div class="ml-5">
-                                <p class="text-lg text-white">Email</p>
-                                <p class="text-xl text-white font-bold">mauryaakash0198@gmail.com</p>
+                                <p class="text-lg mr-72  text-white">Email</p>
+                                <p class="text-xl  text-white font-bold">mauryaakash0198@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-center w-full py-5">
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <i class="fa-solid fa-location-dot text-white text-3xl"></i>
                             </a>
                             <div class="ml-5">
-                                <p class="text-lg text-white">Location</p>
+                                <p class="text-lg mr-52  text-white">Location</p>
                                 <p class="text-xl text-white font-bold capitalize">Pandesara Surat, 394221</p>
                             </div>
                         </div>
