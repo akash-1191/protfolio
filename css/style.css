@@ -1,10 +1,10 @@
 /* navbar header  */
 
-ul li .block{
+ul li .block {
     position: relative;
-  }
-  
-  ul li .block::after{
+}
+
+ul li .block::after {
     content: '';
     position: absolute;
     bottom: 5;
@@ -14,184 +14,249 @@ ul li .block{
     height: 4px;
     transition: width .6s;
     background-color: #23a0b8;
-  }
-  
-  ul li .block:hover::after{
+}
+
+ul li .block:hover::after {
     width: 100%;
-  }
-  
-  /* about page css */
-  .tool, .tool1, .tool2 {
-      width: 220px;
-      height: 220px;
-      box-shadow: 16px 14px 20px #0000008c;
-      border-radius: 10px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #101010;
-      margin: 10px;
-  }
-  .tool::before, .tool1::before, .tool2::before {
-      content: "";
-      width: 150%;
-      height: 150%;
-      position: absolute;
-      animation: rotate 2s linear infinite;
-  }
-  .tool::before {
-      background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-  }
-  .tool1::before {
-      background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
-  }
-  .tool2::before {
-      background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
-  }
-  .tool::after, .tool1::after, .tool2::after {
-      content: "";
-      width: 210px;
-      height: 210px;
-      background: #101010 no-repeat center center;
-      background-size: contain;
-      position: absolute;
-      border-radius: 10px;
-      box-shadow: inset 20px 20px 20px #0000008c;
-  }
-  .tool::after {
-      background-image: url('../image/vscode.png'); 
-  }
-  .tool1::after {
-      background-image: url('../image/macos.png'); 
-  }
-  .tool2::after {
-      background-image: url('../image/postman.png'); 
-  }
+}
+
+/* about page css */
+.tool,
+.tool1,
+.tool2 {
+    width: 220px;
+    height: 220px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101010;
+    margin: 10px;
+}
+
+.tool::before,
+.tool1::before,
+.tool2::before {
+    content: "";
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+.tool::before {
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+}
+
+.tool1::before {
+    background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
+}
+
+.tool2::before {
+    background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+}
+
+.tool::after,
+.tool1::after,
+.tool2::after {
+    content: "";
+    width: 210px;
+    height: 210px;
+    background: #101010 no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+.tool::after {
+    background-image: url('../image/vscode.png');
+}
+
+.tool1::after {
+    background-image: url('../image/macos.png');
+}
+
+.tool2::after {
+    background-image: url('../image/postman.png');
+}
 
 
-  @keyframes rotate {
-      from {
-          transform: rotate(0deg);
-      }
-      to {
-          transform: rotate(360deg);
-      }
-  }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
 
-  /* skills page animation  */
+    to {
+        transform: rotate(360deg);
+    }
+}
 
-     /* about page css */
-     .tool3, .tool4, .tool5, .tool6,.tool7, .tool8, .tool9, .tool10,.tool11, .tool12{
-        width: 210px;
-        height: 210px;
-        box-shadow: 16px 14px 20px #0000008c;
-        border-radius: 10px;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #101010;
-        margin: 10px; 
-    }
-    .tool3::before, .tool4::before, .tool5::before, .tool6::before,
-    .tool7::before, .tool7::before, .tool8::before, .tool9::before,
-    .tool10::before, .tool11::before, .tool12::before{
-        content: "";
-        width: 160%;
-        height: 160%;
-        position: absolute;
-        animation: rotate 2s linear infinite;
-    }
-    .tool3::before {
-        background-image: conic-gradient(#ff0052 20deg, transparent 120deg );
-    }
-    .tool5::before {
-        background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
-    }
-    .tool4::before {
-        background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
-    }
-    .tool6::before {
-        background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-    }
-    .tool7::before {
-        background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
-    }
-    .tool8::before {
-        background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
-    }
-    .tool9::before {
-        background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-    }
-    .tool10::before {
-        background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
-    }
-    .tool11::before {
-        background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
-    }
-    .tool12::before {
-        background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-    }
-    .tool3::after, .tool4::after, .tool5::after, .tool6::after,
-    .tool7::after, .tool7::after, .tool8::after, .tool9::after,
-    .tool10::after, .tool11::after, .tool12::after {
-        content: "";
-        width: 200px;
-        height: 200px;
-        background: #101010 no-repeat center center;
-        background-size: contain;
-        position: absolute;
-        border-radius: 10px;
-        
-        box-shadow: inset 20px 20px 20px #0000008c;
-    }
-      /* skills page animations */
-.tool3::after {
-    background-image: url('../image/htmlnew.png'); 
+/* skills page animation  */
+
+/* about page css */
+.tool3,
+.tool4,
+.tool5,
+.tool6,
+.tool7,
+.tool8,
+.tool9,
+.tool10,
+.tool11,
+.tool12 {
+    width: 210px;
+    height: 210px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101010;
+    margin: 10px;
 }
-.tool4::after {
-    background-image: url('../image/css-removebg-preview.png'); 
+
+.tool3::before,
+.tool4::before,
+.tool5::before,
+.tool6::before,
+.tool7::before,
+.tool7::before,
+.tool8::before,
+.tool9::before,
+.tool10::before,
+.tool11::before,
+.tool12::before {
+    content: "";
+    width: 160%;
+    height: 160%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
 }
-.tool5::after {
-    background-image: url('../image/js1.png'); 
-}.tool6::after {
-    background-image: url('../image/tailwind.png'); 
+
+.tool3::before {
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
 }
-.tool7::after {
-    background-image: url('../image/jquery.png'); 
+
+.tool5::before {
+    background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
 }
-.tool8::after {
-    background-image: url('../image/python-removebg-preview.png'); 
-}.tool9::after {
-    background-image: url('../image/php-Photoroom.png'); 
+
+.tool4::before {
+    background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
 }
-.tool10::after {
-    background-image: url('../image/mysql-removebg-preview.png'); 
+
+.tool6::before {
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
 }
-.tool11::after {
-    background-image: url('../image/github1.png'); 
+
+.tool7::before {
+    background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
 }
+
+.tool8::before {
+    background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+}
+
+.tool9::before {
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+}
+
+.tool10::before {
+    background-image: conic-gradient(#00ff52 20deg, transparent 120deg);
+}
+
+.tool11::before {
+    background-image: conic-gradient(#0052ff 20deg, transparent 120deg);
+}
+
+.tool12::before {
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+}
+
+.tool3::after,
+.tool4::after,
+.tool5::after,
+.tool6::after,
+.tool7::after,
+.tool7::after,
+.tool8::after,
+.tool9::after,
+.tool10::after,
+.tool11::after,
 .tool12::after {
-    background-image: url('../image/uiux.png'); 
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: #101010 no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    border-radius: 10px;
+
+    box-shadow: inset 20px 20px 20px #0000008c;
 }
+
+/* skills page animations */
+.tool3::after {
+    background-image: url('../image/htmlnew.png');
+}
+
+.tool4::after {
+    background-image: url('../image/css-removebg-preview.png');
+}
+
+.tool5::after {
+    background-image: url('../image/js1.png');
+}
+
+.tool6::after {
+    background-image: url('../image/tailwind.png');
+}
+
+.tool7::after {
+    background-image: url('../image/jquery.png');
+}
+
+.tool8::after {
+    background-image: url('../image/python-removebg-preview.png');
+}
+
+.tool9::after {
+    background-image: url('../image/php-Photoroom.png');
+}
+
+.tool10::after {
+    background-image: url('../image/mysql-removebg-preview.png');
+}
+
+.tool11::after {
+    background-image: url('../image/github1.png');
+}
+
+.tool12::after {
+    background-image: url('../image/uiux.png');
+}
+
 /* certificate.php css */
 
 .cer {
     transition: all 1.5s ease 0s !important;
     box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 9px; 
+    border-radius: 9px;
 }
 
 .cer:hover {
     box-shadow: 0 1px 5px 5px #9666f8, 0 1px 5px 5px #9666f8;
     transform: scale(1.05);
-    
+
 }
 
-  /* project.php css style */
+/* project.php css style */
 .card {
     transition: all .8s ease 0s !important;
     box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.5);
@@ -200,12 +265,13 @@ ul li .block{
 .card:hover {
     box-shadow: 0 1px 5px 3px rgba(250, 50, 50, 0.7), 0 1px 5px 3px rgba(50, 150, 250, 0.7);
     transform: scale(1.05);
-   
+
 }
+
 /* ================================================= */
- /* ressume button animation */
- /* ================================================== */
- .glow-on-hover {
+/* ressume button animation */
+/* ================================================== */
+.glow-on-hover {
     width: 60%;
     height: 50px;
     border: 2px solid blue;
@@ -223,7 +289,7 @@ ul li .block{
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -260,34 +326,49 @@ ul li .block{
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 /* all section scrolling smooth */
+html {
+    scroll-behavior: smooth;
+}
 section {
-  padding: 60px 0;
-  scroll-behavior: smooth;
+    padding: 60px 0;
+    
 }
 
 /* contact button css */
 .btn-grad {
-    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
     margin: 10px;
     padding: 8px 15px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;            
+    color: white;
     box-shadow: 0 0 13px #eee;
     border-radius: 10px;
     display: block;
-  }
+}
 
-  .btn-grad:hover {
+.btn-grad:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
-  }
+}
+
+
+
+

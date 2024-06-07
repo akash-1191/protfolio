@@ -1,6 +1,5 @@
-
 <style>
-     iframe {
+    iframe {
       width: 100%;
       height: 100vh;
       border: 1px solid #ccc;
@@ -10,26 +9,33 @@
       iframe {
         height: 80vh; /* Adjust height for small screens */
       }
-      
     }
-</style>
-<script>
-  function showDocument() {
-    var iframe = document.getElementById('pdfIframe');
-    var returnButton = document.getElementById('returnButton');
-    iframe.classList.remove('hidden');
-    returnButton.classList.remove('hidden');
-    iframe.src = './image/ResumeAkash.pdf';
-  }
+   
+  </style>
+  <script>
+    function showDocument() {
+      var iframe = document.getElementById('pdfIframe');
+      var returnButton = document.getElementById('returnButton');
 
-  function hideDocument() {
-    var iframe = document.getElementById('pdfIframe');
-    var returnButton = document.getElementById('returnButton');
-    iframe.classList.add('hidden');
-    returnButton.classList.add('hidden');
-    iframe.src = '';
-  }
-</script>
+      if (window.innerWidth <= 768) {
+        // Open PDF in a new tab on small screens
+        window.open('./image/ResumeAkash.pdf', '_blank');
+      } else {
+        
+        iframe.classList.remove('hidden');
+        returnButton.classList.remove('hidden');
+        iframe.src = './image/ResumeAkash.pdf';
+      }
+    }
+
+    function hideDocument() {
+      var iframe = document.getElementById('pdfIframe');
+      var returnButton = document.getElementById('returnButton');
+      iframe.classList.add('hidden');
+      returnButton.classList.add('hidden');
+      iframe.src = '';
+    }
+  </script>
 
 <section class="text-white flex py-10 md:pt-44">
   <div class="flex flex-col justify-center items-center w-full px-4">
