@@ -369,6 +369,11 @@ section {
     text-decoration: none;
 }
 
+    /* Hide the body overflow initially */
+    body {
+      overflow: hidden;
+    }
+ 
 
 
 
