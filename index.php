@@ -20,7 +20,7 @@
   <!-- code for the loding page animation -->
   <!-- =================================== -->
   <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-20 transition duration-1000 ease-in-out transform translate-y-0 opacity-100">
-    <img src="./image/pageloadgif.gif" alt="Photography GIF" class="w-full h-full rounded-lg">
+    <img src="./image/loadingpagenew.gif" alt="Photography GIF" class="w-full h-full rounded-lg">
 </div>
 
 
@@ -77,7 +77,7 @@
 
   <!-- Sections -->
   <div id="home">
-    <div class="container mx-auto text-center">
+    <div class="">
       <?php include_once "mainpage.php"; ?>
     </div>
   </div>

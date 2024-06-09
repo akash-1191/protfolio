@@ -54,7 +54,7 @@
                         Contact
                     </button>
                 </a>
-                <a href="https://github.com/akash-1191" target="_blank"><i class="fa-brands fa-github p-4 hover:text-rose-500 hover:scale-125" style="transition: all 0.5s ease 0s;"></i></a>
+                <a href="https://github.com/akash-1191" target="_blank"><i class="fa-brands ml-20 fa-github p-4 hover:text-rose-500 hover:scale-125" style="transition: all 0.5s ease 0s;"></i></a>
                 <a href="https://www.linkedin.com/in/akash-maurya-319632256/" target="_blank"><i class="fa-brands fa-linkedin p-4 hover:text-rose-500 hover:scale-125" style="transition: all 0.5s ease 0s;"></i></a>
                 <a href="https://x.com/AkashMaury1191" target="_blank"><i class="fa-brands fa-twitter p-4 hover:text-rose-500 hover:scale-125" style="transition: all 0.5s ease 0s;"></i></a>
                 <a href="https://www.instagram.com/maurya_akash_1191/?next=%2F" target="_blank"><i class="fa-brands fa-instagram p-4 hover:text-rose-500 hover:scale-125" style="transition: all 0.5s ease 0s;"></i></a>

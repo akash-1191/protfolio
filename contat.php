@@ -21,27 +21,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require './phpmailer/PHPMailer.php';
     require './phpmailer/SMTP.php';
 
-    // Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'webdevloper11919463@gmail.com';
-        $mail->Password   = 'mohk hecx xxfs nhms';  // Be careful with exposing credentials in code
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'webdevloper11919463@gmail.com';
+        $mail->Password = 'mohk hecx xxfs nhms';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+        $mail->Port = 465;
 
-        // Recipients
         $mail->setFrom('webdevloper11919463@gmail.com', 'Contact Form');
-        $mail->addAddress('webdevloper11919463@gmail.com', 'Web Developer');  // Send to your own email
+        $mail->addAddress('webdevloper11919463@gmail.com', 'Web Developer');
 
-        // Content
         $mail->isHTML(true);
         $mail->Subject = 'Protfolio Message To Hiring';
-        $mail->Body    = "
+        $mail->Body = "
             <table style='width: 100%; border: 1px solid #ddd; border-collapse: collapse;'>
                 <tr style='background-color: #f2f2f2;'>
                     <th style='padding: 10px; border: 1px solid #ddd;'>Field</th>
@@ -68,38 +64,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
         echo "<script>alert('Message has been sent');</script>";
+        echo "<script>windows.location.href(index.php) </script>";  
+
     } catch (Exception $e) {
         echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
     }
 }
 ?>
 
-<section class="py-10 sm:py-16 lg:py-20">
+<section class="py-10 sm:py-16 lg:py-20 overflow-x-hidden">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap-reverse justify-center items-center md:space-x-12 md:gap-52">
             <div class="bg-gray-400 rounded-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 px-5 py-5">
                 <div class="rounded-lg w-full px-5 py-5">
                     <div class="text-center capitalize leading-normal w-full">
-                        <h1 class="text-transparent bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500 md:text-5xl text-4xl">Contact me</h1>
+                        <h1 class="text-transparent bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text hover:from-red-600 hover:to-blue-600 transition duration-500 md:text-5xl text-4xl">
+                            Contact me</h1>
                     </div>
-                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <form method="post" id="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validForm(event)">
                         <div class="pt-10 space-y-4">
                             <div>
                                 <input type="text" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="name" id="name" placeholder="First Name">
                             </div>
                             <div>
-                                <input type="email" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="email" id="email" placeholder="Enter Email">
+                                <input type="text" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="email" id="email" placeholder="Enter Email">
                             </div>
                             <div>
-                                <input type="text" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="contact_number" id="contact_number" placeholder="Contact Number">
+                                <input type="number" class="bg-black text-white w-full h-14 px-4 text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900" name="contact_number" id="contact_number" placeholder="Contact Number">
                             </div>
                             <div>
-                                <textarea name="message" rows="5" class="bg-black px-4 py-2 text-white text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900 w-full" placeholder="Write Message"></textarea>
+                                <textarea name="message" rows="5" class="bg-black px-4 py-2 text-white text-xl border-2 rounded-md outline-none border-gray-800 hover:border-gray-900 w-full" id="message" placeholder="Write Message"></textarea>
                             </div>
                         </div>
                         <div class="pt-4">
                             <div class="flex justify-start text-white">
-                                <button type="submit" name="submit" class="bg-gradient-to-r from-blue-500 to-black hover:bg-gradient-to-l p-3 rounded-full text-xl w-full">Send Message</button>
+                                <button type="submit" name="send" class="bg-gradient-to-r from-blue-500 to-black hover:bg-gradient-to-l p-3 rounded-full text-xl w-full">Send
+                                    Message</button>
                             </div>
                         </div>
                     </form>
@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <i class="fa-solid fa-envelope text-white text-3xl"></i>
                             </a>
                             <div class="ml-5">
-                                <p class="text-lg mr-72  text-white">Email</p>
+                                <p class="text-lg mr-64  text-white">Email</p>
                                 <p class="text-xl  text-white font-bold">mauryaakash0198@gmail.com</p>
                             </div>
                         </div>
@@ -143,4 +143,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </section>
 
+<script>
 
+
+function validForm(e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var contact_number = document.getElementById("contact_number").value;
+    var message = document.getElementById("message").value;
+    var mailFormat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+    var contactFormat = /^\d{10}$/;
+
+    if (!name) {
+        alert("Please enter your Name!");
+        document.getElementById("name").focus();
+        return false;
+    } else if (!email) {
+        alert("Please enter your Email!");
+        document.getElementById("email").focus();
+        return false;
+    } else if (!email.match(mailFormat)) {
+        alert("Please enter a valid Email!");
+        document.getElementById("email").focus();
+        return false;
+    } else if (!contact_number) {
+        alert("Please enter your Contact Number!");
+        document.getElementById("contact_number").focus();
+        return false;
+    } else if (!contact_number.match(contactFormat)) {
+        alert("Please enter a valid Contact Number!");
+        document.getElementById("contact_number").focus();
+        return false;
+    } else if (!message) {
+        alert("Please enter your Message!");
+        document.getElementById("message").focus();
+        return false;
+    } else {
+        // Form submission
+        var form = e.target;
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert("Message has been sent!");
+                    window.location.reload();
+                } else {
+                    alert("Error: Message could not be sent. Please try again later.");
+                }
+            }
+        };
+        xhr.send(new URLSearchParams(formData).toString());
+        return true;
+    }
+}
+</script>
