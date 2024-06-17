@@ -12,6 +12,60 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+<!-- ============================
+loder animaton css
+============================ -->
+  <style>
+    @keyframes blur {
+      0% {
+        filter: blur(0);
+      }
+
+      25% {
+        filter: blur(1px);
+      }
+
+      50% {
+        filter: blur(5px);
+      }
+
+      75% {
+        filter: blur(1px);
+      }
+
+      100% {
+        filter: blur(0);
+      }
+    }
+
+    .blur {
+      animation: blur 4s infinite;
+    }
+
+    .blur:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .blur:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .blur:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    .blur:nth-child(4) {
+      animation-delay: 1s;
+    }
+
+    .blur:nth-child(5) {
+      animation-delay: 1.4s;
+    }
+
+    .blur:nth-child(6) {
+      animation-delay: 1.8s;
+    }
+  </style>
 </head>
 
 <body class="overflow-x-hidden">
@@ -19,9 +73,20 @@
   <!-- =============================== -->
   <!-- code for the loding page animation -->
   <!-- =================================== -->
-  <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-20 transition duration-1000 ease-in-out transform translate-y-0 opacity-100">
+  <!-- <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-20 transition duration-1000 ease-in-out transform translate-y-0 opacity-100">
     <img src="./image/loadingpagenew.gif" alt="Photography GIF" class="w-full h-full rounded-lg">
-</div>
+</div> -->
+
+
+  <div id="preloader" class="fixed inset-0 text-white flex items-center justify-center bg-black z-20 transition duration-1000 ease-in-out transform translate-y-0 opacity-100 text-[35px]">
+    <span class=" blur mx-2">L</span>
+    <span class="blur mx-2">O</span>
+    <span class="blur mx-2">A</span>
+    <span class="blur mx-2">I</span>
+    <span class="blur mx-2">N</span>
+    <span class="blur mx-2">G</span>
+  </div>
+
 
 
   <!-- =============================== -->
