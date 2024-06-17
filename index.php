@@ -78,7 +78,7 @@ loder animaton css
 </div> -->
 
 
-  <div id="preloader" class="fixed inset-0 text-white flex items-center justify-center bg-black z-20 transition duration-1000 ease-in-out transform translate-y-0 opacity-100 text-[35px]">
+  <div id="preloader" class="fixed inset-0 text-white flex items-center justify-center bg-black z-20 transition duration-1000 ease-in-out transform translate-y-0 opacity-100 md:text-[35px] text-2xl tracking-[1.5em]">
     <span class=" blur mx-2">L</span>
     <span class="blur mx-2">O</span>
     <span class="blur mx-2">A</span>
